@@ -1,0 +1,6 @@
+[submodule "rafael-twitter-stream-controller"]
+	path = rafael-twitter-stream-controller
+	url = https://github.com/ferhatsahinkaya/rafael-twitter-stream-controller.git
+[submodule "roger-twitter-streamer"]
+	path = roger-twitter-streamer
+	url = https://github.com/ferhatsahinkaya/roger-twitter-streamer.git

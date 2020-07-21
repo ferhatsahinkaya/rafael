@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  twitter-stream-controller:
+    build:
+      context: "rafael-twitter-stream-controller"
+      dockerfile: "dist/docker/Dockerfile"
+    image: "rafael/twitter-stream-controller:latest"
+    expose:
+      - 9090
+    ports:
+      - 9090:9090
+    environment:
+      PORT: 9090
+    volumes:
+      - ./config/secrets/twitter-secrets.yml:/config/secrets/twitter-secrets.yml:rw
+
+  twitter-streamer:
+    build:
+      context: "rafael-twitter-streamer"
+      dockerfile: "dist/docker/Dockerfile"
+    image: "rafael/twitter-streamer:latest"
+    expose:
+      - 9091
+    ports:
+      - 9091:9091
+    environment:
+      PORT: 9091
+    volumes:
+      - ./config/secrets/twitter-secrets.yml:/config/secrets/twitter-secrets.yml:rw
