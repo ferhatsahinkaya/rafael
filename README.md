@@ -11,11 +11,11 @@ make build run
     "data": [
         {
             "@type": "mention",
-            "userId" : "<account-to-monitor-1>"
+            "userId" : "<account-to-watch-1>"
         }, 
         {
             "@type": "mention",
-            "userId" : "<account-to-monitor-2>"
+            "userId" : "<account-to-watch-2>"
         }]
 }
 ```
