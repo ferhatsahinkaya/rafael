@@ -23,6 +23,7 @@ services:
     environment:
       PORT: 9091
       BROKER_LIST: kafka:9093
+      STREAM_TOPIC: tweet-stream-topic
     volumes:
       - ./config/secrets/twitter-secrets.yml:/config/secrets/twitter-secrets.yml:rw
     depends_on:
